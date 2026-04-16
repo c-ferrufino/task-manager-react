@@ -1,0 +1,70 @@
+main {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 40px 16px;
+  background: var(--page-bg);
+}
+
+.app {
+  width: 100%;
+  max-width: 480px;
+  background: var(--bg);
+  border-radius: 16px;
+  box-shadow: var(--shadow);
+  overflow: hidden;
+  border: 1px solid var(--border);
+}
+
+.task-counter {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  padding: 8px 20px;
+  font-size: 15px;
+  color: var(--text);
+  background: var(--accent-bg);
+  border-bottom: 1px solid var(--border);
+}
+
+.task-counter--empty {
+  padding: 40px 20px;
+  text-align: center;
+  font-size: 16px;
+  color: var(--text);
+}
+
+.task-section {
+  border-top: 1px solid var(--border);
+}
+
+.task-section__title {
+  font-size: 13px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.8px;
+  color: var(--text);
+  padding: 10px 20px 4px;
+}
+
+.task-section:has(.task-card__text--completed) .task-section__title {
+  color: var(--accent);
+}
+
+.task-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.footer {
+  width: 100%;
+  padding: 14px 32px;
+  text-align: center;
+  font-size: 14px;
+  color: var(--text);
+  background: var(--bg);
+  border-top: 1px solid var(--border);
+  letter-spacing: 0.5px;
+}

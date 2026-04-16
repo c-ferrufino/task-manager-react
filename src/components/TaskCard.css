@@ -1,0 +1,90 @@
+.task-card {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 12px 20px;
+  border-bottom: 1px solid var(--border);
+  transition: background 0.15s;
+}
+
+.task-card:last-child {
+  border-bottom: none;
+}
+
+.task-card:hover {
+  background: var(--accent-bg);
+}
+
+.task-card input[type='checkbox'] {
+  width: 16px;
+  height: 16px;
+  accent-color: var(--accent);
+  cursor: pointer;
+  flex-shrink: 0;
+}
+
+.task-card__text {
+  flex: 1;
+  font-size: 16px;
+  color: var(--text-h);
+  transition: color 0.2s;
+}
+
+.task-card__text--completed {
+  text-decoration: line-through;
+  color: var(--text);
+}
+
+.task-card__complete {
+  padding: 4px 10px;
+  font-size: 14px;
+  font-family: inherit;
+  color: #16a34a;
+  background: transparent;
+  border: 1px solid #16a34a;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background 0.2s, color 0.2s;
+  flex-shrink: 0;
+}
+
+.task-card__complete:hover {
+  background: #15803d;
+  color: #fff;
+}
+
+.task-card__undo {
+  padding: 4px 10px;
+  font-size: 14px;
+  font-family: inherit;
+  color: #d97706;
+  background: transparent;
+  border: 1px solid #d97706;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background 0.2s, color 0.2s;
+  flex-shrink: 0;
+}
+
+.task-card__undo:hover {
+  background: #b45309;
+  color: #fff;
+}
+
+.task-card__delete {
+  padding: 4px 10px;
+  font-size: 14px;
+  font-family: inherit;
+  color: #dc2626;
+  background: transparent;
+  border: 1px solid #dc2626;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background 0.2s, color 0.2s;
+  flex-shrink: 0;
+}
+
+.task-card__delete:hover {
+  background: #b91c1c;
+  color: #fff;
+}
