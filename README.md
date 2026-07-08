@@ -25,8 +25,51 @@ Aplicación fullstack de gestión de tareas desarrollada.
 - Autenticación con JWT (`POST /login`, `GET /private`)
 - API REST con Express
 
+## Instalación
+
+Clona el repositorio e instala las dependencias del frontend y del backend por separado.
+
+```bash
+git clone https://github.com/c-ferrufino/task-manager-react.git
+cd task-manager-react
+
+# Frontend
+npm install
+
+# Backend
+cd backend
+npm install
+```
+
+### Variables de entorno
+
+Crea un archivo `.env` dentro de `backend/` con:
+
+```env
+DATABASE_URL="postgresql://usuario:password@host:puerto/nombre_bd"
+```
+
+## Comandos
+
+**Frontend** (raíz del proyecto)
+
+```bash
+npm run dev      # entorno de desarrollo
+npm run build    # build de producción
+npm run preview  # previsualizar build
+npm run lint     # linting
+```
+
+**Backend** (`backend/`)
+
+```bash
+npm run dev      # entorno de desarrollo
+npm run build    # prisma generate
+npm start        # levantar el servidor
+```
+
 ## Despliegue
 
 - **Frontend**: Vercel
 - **Backend**: Render
-- **Base de datos**: Render PostgreSQL
+- **Base de datos**: PostgreSQL en Render (gestionada con Prisma ORM)
