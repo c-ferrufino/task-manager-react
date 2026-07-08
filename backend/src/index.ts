@@ -15,7 +15,7 @@ app.use(express.json());
 const adapter = new PrismaPg(process.env['DATABASE_URL']!);
 const prisma = new PrismaClient({ adapter });
 
-const SECRET_KEY = "6844149christian"; 
+const SECRET_KEY = process.env['JWT_SECRET']!;
 
 // Verificar que el backend está corriendo
 app.get('/', (_req: any, res: any) => {

@@ -46,8 +46,11 @@ npm install
 Crea un archivo `.env` dentro de `backend/` con:
 
 ```env
-DATABASE_URL="postgresql://usuario:password@host:puerto/nombre_bd"
+DATABASE_URL="postgresql://usuario:password@host:puerto/nombre_bd?sslmode=require"
+JWT_SECRET="una_clave_secreta_larga_y_aleatoria"
 ```
+
+> Render exige SSL, por lo que `DATABASE_URL` debe incluir `?sslmode=require`.
 
 ## Comandos
 
