@@ -12,7 +12,10 @@ const PORT = 3000;
 app.use(cors());
 app.use(express.json());
 
-const adapter = new PrismaPg(process.env['DATABASE_URL']!);
+const adapter = new PrismaPg({
+    connectionString: process.env['DATABASE_URL']!,
+    ssl: { rejectUnauthorized: false },
+});
 const prisma = new PrismaClient({ adapter });
 
 const SECRET_KEY = process.env['JWT_SECRET']!;
