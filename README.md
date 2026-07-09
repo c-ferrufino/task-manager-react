@@ -1,5 +1,7 @@
 # Task Manager
 
+<!-- BADGE_CI -->
+
 Aplicación fullstack de gestión de tareas desarrollada.
 
 ## Tecnologías
@@ -76,4 +78,4 @@ npm start        # levantar el servidor
 - **Frontend**: Vercel
 - **Backend**: Render
 - **Base de datos**: PostgreSQL en Render (gestionada con Prisma ORM)
-# prueba de protección
+
