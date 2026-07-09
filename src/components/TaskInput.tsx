@@ -34,6 +34,6 @@ function TaskInput({ onAdd }: Readonly<TaskInputProps>) {
       </button>
     </form>
   )
-}
+
 
 export default TaskInput
