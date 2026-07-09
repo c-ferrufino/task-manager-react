@@ -1,6 +1,7 @@
 # Task Manager
 
-<!-- BADGE_CI -->
+![CI](https://github.com/c-ferrufino/task-manager-react/actions/workflows/ci.yml/badge.svg)
+
 
 Aplicación fullstack de gestión de tareas desarrollada.
 
