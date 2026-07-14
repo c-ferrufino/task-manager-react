@@ -4,7 +4,7 @@ import { describe, it, expect, vi } from 'vitest'
 import TaskInput from './TaskInput'
 
 describe('TaskInput', () => {
-  it('llama a onAdd con el texto escrito por el usuario', async () => {
+  it('envía el texto ingresado al agregar una tarea', async () => {
     // Arrange
     const onAdd = vi.fn()
     render(<TaskInput onAdd={onAdd} />)
@@ -19,7 +19,7 @@ describe('TaskInput', () => {
     expect(onAdd).toHaveBeenCalledWith('Comprar pan')
   })
 
-  it('no llama a onAdd si el campo está vacío', async () => {
+  it('no agrega nada si el campo está vacío', async () => {
     const onAdd = vi.fn()
     render(<TaskInput onAdd={onAdd} />)
     const usuario = userEvent.setup()
