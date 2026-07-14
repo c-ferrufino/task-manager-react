@@ -1,4 +1,5 @@
 import { useState } from 'react'
+import { esTextoTareaValido } from '../utils/validaciones'
 import './TaskInput.css'
 
 type TaskInputProps = {
@@ -13,22 +14,22 @@ function TaskInput({ onAdd }: Readonly<TaskInputProps>) {
       className="task-input"
       onSubmit={(e) => {
         e.preventDefault()
-        const trimmed = text.trim()
-        if (!trimmed) return
-        onAdd(trimmed)
+        if (!esTextoTareaValido(text)) return
+        onAdd(text.trim())
         setText('')
       }}
     >
       <input
         type="text"
+        aria-label="Nueva tarea"
         value={text}
         onChange={(e) => setText(e.target.value)}
         placeholder="Nueva tarea..."
       />
       <button
         type="submit"
-        disabled={text.trim() === ''}
-        title={text.trim() === '' ? 'Primero ingresa una tarea' : ''}
+        disabled={!esTextoTareaValido(text)}
+        title={!esTextoTareaValido(text) ? 'Primero ingresa una tarea' : ''}
       >
         Agregar
       </button>
