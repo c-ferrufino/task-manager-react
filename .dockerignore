@@ -1,0 +1,10 @@
+# raíz del proyecto (el frontend no tiene carpeta propia)
+node_modules
+.env
+dist
+.git
+backend
+coverage
+e2e
+test-results
+playwright-report
