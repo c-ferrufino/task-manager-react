@@ -29,6 +29,11 @@ app.get('/', (_req: any, res: any) => {
     res.json({ message: 'Backend running....' });
 });
 
+// GET /health - Healthcheck para Railway
+app.get('/health', (_req: any, res: any) => {
+    res.status(200).json({ status: 'ok' });
+});
+
 // POST /login - Valida credenciales y devuelve un token JWT
 app.post('/login', (req: any, res: any) => {
     const { username, password } = req.body;
